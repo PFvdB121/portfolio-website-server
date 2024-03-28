@@ -15,9 +15,9 @@ return new class extends Migration
         Schema::create('experiences', function (Blueprint $table) {
             $table->id();
             $table->foreignId("user_id")->constrained("users");
-            $table->string("Where");
-            $table->date("Begin");
-            $table->date("Ended");
+            $table->string("where");
+            $table->date("begin");
+            $table->date("ended")->nullable();
             $table->timestamps();
         });
     }
